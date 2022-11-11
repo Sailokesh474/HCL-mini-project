@@ -25,3 +25,8 @@ How to Run Application:-
 6.In phpmyadmin page, create a new database from the left panel and name it as 'orss_db'
 6.Import the file 'myhmsdb.sql' inside your newly created database and click ok.
 7.Open a new tab and type 'http://localhost/orrs/' in the url of your browser
+
+Admin Login details:-
+
+username:-admin
+password:-admin123
