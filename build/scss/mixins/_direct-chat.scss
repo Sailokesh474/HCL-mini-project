@@ -1,0 +1,13 @@
+
+@mixin direct-chat-variant($bg-color, $color: $white) {
+  .right > .direct-chat-text {
+    background-color: $bg-color;
+    border-color: $bg-color;
+    color: color-yiq($bg-color);
+
+    &::after,
+    &::before {
+      border-left-color: $bg-color;
+    }
+  }
+}

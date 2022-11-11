@@ -1,0 +1,22 @@
+
+
+.projects {
+  td {
+    vertical-align: middle;
+  }
+
+  .list-inline {
+    margin-bottom: 0;
+  }
+
+  img.table-avatar,
+  .table-avatar img {
+    border-radius: 50%;
+    display: inline;
+    width: 2.5rem;
+  }
+
+  .project-state {
+    text-align: center;
+  }
+}

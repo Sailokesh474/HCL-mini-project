@@ -1,0 +1,10 @@
+
+.elevation-0 {
+  box-shadow: none !important;
+}
+
+@each $name, $value in $elevations {
+  .elevation-#{$name} {
+    box-shadow: $value !important;
+  }
+}

@@ -1,0 +1,91 @@
+
+@each $name, $color in $theme-colors {
+  @include background-variant($name, $color);
+}
+
+@each $name, $color in $colors {
+  @include background-variant($name, $color);
+}
+
+.bg-gray {
+  background-color: $gray-500;
+  color: color-yiq($gray-500);
+}
+
+.bg-gray-light {
+  background-color: lighten($gray-200, 3%);
+  color: color-yiq(lighten($gray-200, 3%)) !important;
+}
+
+.bg-black {
+  background-color: $black;
+  color: color-yiq($black) !important;
+}
+
+.bg-white {
+  background-color: $white;
+  color: color-yiq($white) !important;
+}
+
+@each $name, $color in $theme-colors {
+  @include background-gradient-variant($name, $color);
+}
+
+@each $name, $color in $colors {
+  @include background-gradient-variant($name, $color);
+}
+
+[class^="bg-"].disabled {
+  opacity: .65;
+}
+
+a.text-muted:hover {
+  color: theme-color(primary) !important;
+}
+
+.link-muted {
+  color: darken($gray-500, 30%);
+
+  &:hover,
+  &:focus {
+    color: darken($gray-500, 40%);
+  }
+}
+
+.link-black {
+  color: $gray-600;
+
+  &:hover,
+  &:focus {
+    color: lighten($gray-500, 20%);
+  }
+}
+
+@each $name, $color in $theme-colors {
+  @include accent-variant($name, $color);
+}
+
+@each $name, $color in $colors {
+  @include accent-variant($name, $color);
+}
+
+[class*="accent-"] {
+  @each $name, $color in $theme-colors {
+    a.btn-#{$name} {
+      color: color-yiq($color);
+    }
+  }
+}
+
+.dark-mode {
+  .bg-light {
+    background-color: lighten($dark, 7.5%) !important;
+    color: $white !important;
+  }
+  .text-black,
+  .text-dark,
+  .link-black,
+  .link-dark {
+    color: $gray-400;
+  }
+}
